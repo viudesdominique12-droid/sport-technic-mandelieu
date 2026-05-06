@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#050505" />
+  <title>Sport Technic Mandelieu — Spécialiste Mercedes-Benz & Smart</title>
+  <meta name="description" content="Garage indépendant spécialiste Mercedes-Benz et Smart à Mandelieu-la-Napoule depuis 2009. Entretien, diagnostic, mécanique haute performance. 4,8/5 ★ sur Google." />
+
+  <link rel="preload" as="video" href="assets/hero.mp4" type="video/mp4" media="(min-width: 901px)" />
+  <link rel="preload" as="video" href="assets/hero-mobile.mp4" type="video/mp4" media="(max-width: 900px)" />
+  <link rel="preload" as="image" href="assets/poster.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=Archivo:wght@500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============= LOADER ============= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__bar"><span></span></div>
+    <div class="loader__label">SPORT&nbsp;TECHNIC<span class="dim">·</span>MANDELIEU</div>
+  </div>
+
+  <!-- ============= CUSTOM CURSOR ============= -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <!-- ============= NAV ============= -->
+  <header class="nav">
+    <a class="nav__brand" href="#top" data-magnetic>
+      <span class="nav__brand-mark">ST</span>
+      <span class="nav__brand-text">Sport Technic <em>Mandelieu</em></span>
+    </a>
+    <nav class="nav__menu" aria-label="Navigation principale">
+      <a href="#manifeste">Manifeste</a>
+      <a href="#specialites">Spécialités</a>
+      <a href="#atelier">Atelier</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+33493472298" class="nav__cta" data-magnetic>
+      <span class="nav__cta-pulse"></span>
+      <span>04&nbsp;93&nbsp;47&nbsp;22&nbsp;98</span>
+    </a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============= HERO — SCROLL-BOUND VIDEO ============= -->
+    <section class="hero" id="hero" aria-label="Présentation Sport Technic">
+      <div class="hero__sticky">
+        <video
+          id="hero-video"
+          class="hero__video"
+          poster="assets/poster.jpg"
+          preload="auto"
+          muted
+          playsinline
+          webkit-playsinline
+          disablepictureinpicture
+          aria-hidden="true"
+          data-src-desktop="assets/hero.mp4"
+          data-src-mobile="assets/hero-mobile.mp4"></video>
+
+        <div class="hero__vignette"></div>
+        <div class="hero__grain"></div>
+
+        <div class="hero__chrome">
+          <div class="hero__corner hero__corner--tl">
+            <span class="hero__chrome-label">EST. 2009 · MANDELIEU · 06</span>
+          </div>
+          <div class="hero__corner hero__corner--tr">
+            <span class="hero__chrome-label">N 43.569° · E 6.944°</span>
+          </div>
+          <div class="hero__corner hero__corner--bl">
+            <span class="hero__chrome-label">SPÉCIALISTE&nbsp;·&nbsp;INDÉPENDANT</span>
+          </div>
+          <div class="hero__corner hero__corner--br">
+            <span class="hero__chrome-label" id="hero-progress">00 / 100</span>
+          </div>
+        </div>
+
+        <div class="hero__layers">
+          <!-- Layer 1: title (early) -->
+          <div class="hero__layer is-visible" data-layer="1">
+            <div class="hero__overline">
+              <span class="dot"></span>
+              <span>Spécialiste indépendant Mercedes-Benz &amp; Smart</span>
+            </div>
+            <h1 class="hero__title">
+              <span class="word"><span>S</span><span>p</span><span>o</span><span>r</span><span>t</span></span>
+              <span class="word"><span>T</span><span>e</span><span>c</span><span>h</span><span>n</span><span>i</span><span>c</span></span>
+            </h1>
+            <p class="hero__sub">Mandelieu-la-Napoule · Côte d'Azur</p>
+          </div>
+
+          <!-- Layer 2: cinematic statement (middle) -->
+          <div class="hero__layer" data-layer="2">
+            <p class="hero__statement">
+              <em>Pour ceux qui exigent</em><br/>
+              <strong>l'excellence mécanique.</strong>
+            </p>
+          </div>
+
+          <!-- Layer 3: scroll cue (end) -->
+          <div class="hero__layer" data-layer="3">
+            <a href="#manifeste" class="hero__scroll" data-magnetic>
+              <span>Découvrir l'atelier</span>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path d="M12 4v14m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__scrollhint" aria-hidden="true">
+          <span>SCROLL</span>
+          <span class="hero__scrollhint-bar"><i></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= MARQUEE ============= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Mercedes-Benz</span><i>★</i>
+        <span>Smart</span><i>★</i>
+        <span>Depuis 2009</span><i>★</i>
+        <span>Mandelieu-la-Napoule</span><i>★</i>
+        <span>Diagnostic constructeur</span><i>★</i>
+        <span>344+ avis Google</span><i>★</i>
+        <span>Mercedes-Benz</span><i>★</i>
+        <span>Smart</span><i>★</i>
+        <span>Depuis 2009</span><i>★</i>
+        <span>Mandelieu-la-Napoule</span><i>★</i>
+        <span>Diagnostic constructeur</span><i>★</i>
+        <span>344+ avis Google</span><i>★</i>
+      </div>
+    </div>
+
+    <!-- ============= MANIFESTE ============= -->
+    <section class="manifeste" id="manifeste">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <span class="section__kicker">Manifeste</span>
+      </div>
+
+      <div class="manifeste__inner">
+        <h2 class="manifeste__text reveal-words">
+          Depuis <em>2009</em>, nous entretenons les Mercedes-Benz et les Smart de la Côte d'Azur avec la rigueur d'un concessionnaire et la liberté d'un indépendant. <span class="dim">Diagnostic constructeur, pièces d'origine, transparence totale sur chaque intervention.</span>
+        </h2>
+
+        <div class="manifeste__signature">
+          <div class="manifeste__signature-block">
+            <span class="label">Direction</span>
+            <strong>Milos &amp; Stéphanie Miletic</strong>
+            <span class="dim">Présidence &amp; Direction générale</span>
+          </div>
+          <div class="manifeste__signature-block">
+            <span class="label">Statut</span>
+            <strong>SAS — RCS Cannes</strong>
+            <span class="dim">SIRET 511&nbsp;667&nbsp;206&nbsp;00011</span>
+          </div>
+          <div class="manifeste__signature-block">
+            <span class="label">Activité</span>
+            <strong>NAF 4520A</strong>
+            <span class="dim">Entretien &amp; réparation véhicules légers</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= SPÉCIALITÉS ============= -->
+    <section class="specs" id="specialites">
+      <div class="section__head">
+        <span class="section__index">02</span>
+        <span class="section__kicker">Deux marques, une obsession</span>
+      </div>
+
+      <div class="specs__grid">
+        <article class="spec-card spec-card--mercedes" data-tilt>
+          <div class="spec-card__bg" aria-hidden="true"></div>
+          <header class="spec-card__head">
+            <span class="spec-card__brand">Mercedes-Benz</span>
+            <span class="spec-card__chip">Spécialiste</span>
+          </header>
+          <h3 class="spec-card__title">L'art de l'étoile.<br/>Sans compromis.</h3>
+          <ul class="spec-card__list">
+            <li>Entretien périodique selon plan constructeur</li>
+            <li>Diagnostic électronique multimarque &amp; étoile</li>
+            <li>Distribution, freinage, suspension, embrayage</li>
+            <li>Pré-contrôle technique &amp; remise à niveau</li>
+          </ul>
+          <footer class="spec-card__foot">
+            <span class="spec-card__hint">Toutes Classes</span>
+            <span class="spec-card__sep">·</span>
+            <span class="spec-card__hint">Berlines · SUV · Coupés</span>
+          </footer>
+        </article>
+
+        <article class="spec-card spec-card--smart" data-tilt>
+          <div class="spec-card__bg" aria-hidden="true"></div>
+          <header class="spec-card__head">
+            <span class="spec-card__brand">Smart</span>
+            <span class="spec-card__chip">Spécialiste</span>
+          </header>
+          <h3 class="spec-card__title">Compacte de génie.<br/>Mécanique de précision.</h3>
+          <ul class="spec-card__list">
+            <li>Entretien complet ForTwo &amp; ForFour</li>
+            <li>Diagnostic électronique dédié</li>
+            <li>Boîte automatisée, embrayage, distribution</li>
+            <li>Conseil sur achat &amp; revente d'occasion</li>
+          </ul>
+          <footer class="spec-card__foot">
+            <span class="spec-card__hint">Thermique</span>
+            <span class="spec-card__sep">·</span>
+            <span class="spec-card__hint">Toutes générations</span>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============= ATELIER / SERVICES ============= -->
+    <section class="atelier" id="atelier">
+      <div class="section__head">
+        <span class="section__index">03</span>
+        <span class="section__kicker">L'atelier</span>
+      </div>
+
+      <h2 class="atelier__title reveal-words">
+        Une intervention, <em>un protocole</em>.<br/>
+        Quatre étapes, zéro mauvaise surprise.
+      </h2>
+
+      <ol class="atelier__steps">
+        <li class="step">
+          <span class="step__num">01</span>
+          <h3 class="step__title">Diagnostic</h3>
+          <p class="step__text">Lecture multiplex, bilan visuel et entretien client. Vous savez exactement ce qui doit être fait — et ce qui peut attendre.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">02</span>
+          <h3 class="step__title">Devis transparent</h3>
+          <p class="step__text">Pièces, main d'œuvre, délais. Vous validez, nous démarrons. Aucun supplément sans votre accord.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">03</span>
+          <h3 class="step__title">Intervention</h3>
+          <p class="step__text">Mécanicien dédié, outillage spécifique Mercedes &amp; Smart. Le mécano vous appelle pour expliquer ce qu'il fait — c'est la maison.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">04</span>
+          <h3 class="step__title">Restitution</h3>
+          <p class="step__text">Essai routier, contrôle final, explication de la facture. Vous repartez avec un véhicule prêt et l'esprit tranquille.</p>
+        </li>
+      </ol>
+
+      <div class="atelier__services">
+        <div class="services__col">
+          <h4 class="services__col-title">Mécanique</h4>
+          <ul>
+            <li>Vidange &amp; révisions périodiques</li>
+            <li>Distribution &amp; courroies accessoires</li>
+            <li>Freinage (plaquettes, disques, étriers)</li>
+            <li>Suspension, amortisseurs, géométrie</li>
+            <li>Embrayage &amp; boîte de vitesses</li>
+          </ul>
+        </div>
+        <div class="services__col">
+          <h4 class="services__col-title">Diagnostic</h4>
+          <ul>
+            <li>Lecture &amp; effacement défauts</li>
+            <li>Codage électronique &amp; calibrations</li>
+            <li>Recherche de panne complexe</li>
+            <li>Contrôle pré-CT &amp; remise en conformité</li>
+          </ul>
+        </div>
+        <div class="services__col">
+          <h4 class="services__col-title">Entretien</h4>
+          <ul>
+            <li>Climatisation (recharge &amp; circuit)</li>
+            <li>Batterie, démarreur, alternateur</li>
+            <li>Échappement &amp; dépollution</li>
+            <li>Pneumatiques &amp; équilibrage</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= STATS ============= -->
+    <section class="stats" id="stats">
+      <div class="stat" data-count="16">
+        <span class="stat__num"><i>0</i></span>
+        <span class="stat__label">années d'expertise<br/>Mercedes &amp; Smart</span>
+      </div>
+      <div class="stat" data-count="344">
+        <span class="stat__num"><i>0</i><b>+</b></span>
+        <span class="stat__label">avis clients<br/>vérifiés Google</span>
+      </div>
+      <div class="stat" data-count="48" data-suffix="/5" data-divisor="10">
+        <span class="stat__num"><i>0</i></span>
+        <span class="stat__label">note moyenne<br/>Google Business</span>
+      </div>
+      <div class="stat" data-count="2">
+        <span class="stat__num"><i>0</i></span>
+        <span class="stat__label">marques,<br/>une expertise totale</span>
+      </div>
+    </section>
+
+    <!-- ============= AVIS ============= -->
+    <section class="reviews" id="avis">
+      <div class="section__head">
+        <span class="section__index">04</span>
+        <span class="section__kicker">Ce que disent nos clients</span>
+      </div>
+
+      <header class="reviews__header">
+        <div>
+          <h2 class="reviews__title">
+            <span class="reviews__rating">4,8<small>/5</small></span>
+            <span class="reviews__stars" aria-label="4,8 sur 5 étoiles">★★★★★</span>
+          </h2>
+          <p class="reviews__sub">344+ avis clients vérifiés sur Google Business</p>
+        </div>
+        <a class="btn btn--ghost"
+           href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+           target="_blank" rel="noopener"
+           data-magnetic>
+          <span>Lire tous les avis sur Google</span>
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </header>
+
+      <div class="reviews__rail" id="reviewsRail">
+        <a class="review"
+           href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+           target="_blank" rel="noopener">
+          <div class="review__head">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__source">via Google</span>
+          </div>
+          <p class="review__text">«&nbsp;De vrais professionnels de l'automobile, spécialisés Mercedes. On sent l'expertise dès le premier contact.&nbsp;»</p>
+          <span class="review__more">Lire l'avis sur Google →</span>
+        </a>
+
+        <a class="review"
+           href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+           target="_blank" rel="noopener">
+          <div class="review__head">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__source">via Google</span>
+          </div>
+          <p class="review__text">«&nbsp;Enfin un spécialiste Mercedes digne de ce nom. Équipe professionnelle, transparente, et de confiance.&nbsp;»</p>
+          <span class="review__more">Lire l'avis sur Google →</span>
+        </a>
+
+        <a class="review"
+           href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+           target="_blank" rel="noopener">
+          <div class="review__head">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__source">via Google</span>
+          </div>
+          <p class="review__text">«&nbsp;Le mécanicien appelle pour expliquer clairement ce qu'il va faire. Approche que je n'ai vue nulle part ailleurs.&nbsp;»</p>
+          <span class="review__more">Lire l'avis sur Google →</span>
+        </a>
+
+        <a class="review"
+           href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+           target="_blank" rel="noopener">
+          <div class="review__head">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__source">via Google</span>
+          </div>
+          <p class="review__text">«&nbsp;Tarifs très raisonnables comparés aux taux horaires des concessionnaires. Et la qualité y est.&nbsp;»</p>
+          <span class="review__more">Lire l'avis sur Google →</span>
+        </a>
+
+        <a class="review"
+           href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+           target="_blank" rel="noopener">
+          <div class="review__head">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__source">via Google</span>
+          </div>
+          <p class="review__text">«&nbsp;Mon véhicule y est entretenu depuis plus de 3 ans, mécanique impeccable. Ne change rien.&nbsp;»</p>
+          <span class="review__more">Lire l'avis sur Google →</span>
+        </a>
+
+        <a class="review"
+           href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+           target="_blank" rel="noopener">
+          <div class="review__head">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__source">via Google</span>
+          </div>
+          <p class="review__text">«&nbsp;Sérieux, compétents, rapides et honnêtes. Le patron prend le temps d'expliquer chaque opération.&nbsp;»</p>
+          <span class="review__more">Lire l'avis sur Google →</span>
+        </a>
+
+        <a class="review"
+           href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+           target="_blank" rel="noopener">
+          <div class="review__head">
+            <span class="review__stars">★★★★★</span>
+            <span class="review__source">via Google</span>
+          </div>
+          <p class="review__text">«&nbsp;Super garage avec un personnel agréable, professionnel et compétent. Je recommande sans hésiter.&nbsp;»</p>
+          <span class="review__more">Lire l'avis sur Google →</span>
+        </a>
+      </div>
+
+      <div class="reviews__nav" aria-hidden="true">
+        <button class="reviews__btn" data-rail-prev>←</button>
+        <button class="reviews__btn" data-rail-next>→</button>
+      </div>
+
+      <p class="reviews__legal">Avis affichés à titre représentatif des thèmes récurrents — la totalité des 344+ avis authentiques est consultable directement sur Google.</p>
+    </section>
+
+    <!-- ============= CONTACT ============= -->
+    <section class="contact" id="contact">
+      <div class="section__head">
+        <span class="section__index">05</span>
+        <span class="section__kicker">Visiter l'atelier</span>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__main">
+          <h2 class="contact__title">Prenez rendez-vous.<br/><em>Le plus simple, c'est par téléphone.</em></h2>
+
+          <a href="tel:+33493472298" class="contact__phone" data-magnetic>
+            <span class="contact__phone-label">Appeler</span>
+            <span class="contact__phone-num">04 93 47 22 98</span>
+          </a>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary"
+               href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+               target="_blank" rel="noopener" data-magnetic>
+              <span>Itinéraire Google Maps</span>
+            </a>
+            <a class="btn btn--ghost" href="mailto:sport-technic@wanadoo.fr" data-magnetic>
+              <span>sport-technic@wanadoo.fr</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="contact__info">
+          <div class="info-block">
+            <span class="info-block__label">Adresse</span>
+            <p class="info-block__value">
+              21 Avenue Jean Mermoz<br/>
+              Parc d'Activité de la Siagne<br/>
+              06210 Mandelieu-la-Napoule
+            </p>
+            <span class="info-block__hint">Sortie A8 — Cannes Ouest</span>
+          </div>
+
+          <div class="info-block">
+            <span class="info-block__label">Horaires</span>
+            <ul class="info-block__hours">
+              <li><span>Lun → Ven</span><b>8h00 — 12h00</b></li>
+              <li><span></span><b>14h00 — 18h00</b></li>
+              <li><span>Sam &amp; Dim</span><b class="closed">Fermé</b></li>
+            </ul>
+            <span class="info-block__hint" id="open-now">—</span>
+          </div>
+
+          <div class="info-block">
+            <span class="info-block__label">Coordonnées</span>
+            <p class="info-block__value">
+              <a href="tel:+33493472298">04 93 47 22 98</a><br/>
+              <a href="mailto:sport-technic@wanadoo.fr">sport-technic@wanadoo.fr</a><br/>
+              <a href="https://www.facebook.com/sporttechnic/" target="_blank" rel="noopener">Facebook ↗</a>
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <a class="contact__map"
+         href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e"
+         target="_blank" rel="noopener" data-magnetic>
+        <iframe
+          title="Localisation Sport Technic Mandelieu sur Google Maps"
+          src="https://www.google.com/maps?q=43.5697588,6.9445751&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <span class="contact__map-cta">Ouvrir dans Google Maps ↗</span>
+      </a>
+    </section>
+
+    <!-- ============= FOOTER ============= -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__logo">Sport Technic <em>Mandelieu</em></span>
+          <p class="footer__tagline">Spécialiste indépendant<br/>Mercedes-Benz &amp; Smart<br/>depuis 2009.</p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <span class="footer__col-title">Atelier</span>
+            <a href="#manifeste">Manifeste</a>
+            <a href="#specialites">Spécialités</a>
+            <a href="#atelier">Services</a>
+          </div>
+          <div>
+            <span class="footer__col-title">Confiance</span>
+            <a href="#avis">Avis Google</a>
+            <a href="https://www.facebook.com/sporttechnic/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e" target="_blank" rel="noopener">Google Maps</a>
+          </div>
+          <div>
+            <span class="footer__col-title">Contact</span>
+            <a href="tel:+33493472298">04 93 47 22 98</a>
+            <a href="mailto:sport-technic@wanadoo.fr">sport-technic@wanadoo.fr</a>
+            <span class="footer__addr">21 Av. Jean Mermoz, 06210 Mandelieu-la-Napoule</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <span>© <span id="year">2026</span> SPORT TECHNIC MANDELIEU — SAS au capital de 10 000 €</span>
+        <span>SIRET 511&nbsp;667&nbsp;206&nbsp;00011 · RCS Cannes · NAF 4520A</span>
+        <span>Direction&nbsp;: Milos &amp; Stéphanie Miletic</span>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

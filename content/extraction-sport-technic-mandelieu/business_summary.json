@@ -1,0 +1,181 @@
+{
+  "extraction_date": "2026-05-06",
+  "source_type": "google_business_aggregated",
+  "source_urls": [
+    "https://maps.app.goo.gl/UrmPARUGtB4K1CTKA",
+    "https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.6397045,11z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e!8m2!3d43.5697588!4d6.9445751",
+    "https://www.pagesjaunes.fr/pros/51756234",
+    "https://fr.mappy.com/poi/581130510351d122439f998c",
+    "https://www.au-magasin.fr/06210-mandelieu-la-napoule/sport-technic-mandelieu-specialite-mercedes-smart-279502.html",
+    "https://atelier-de-mecanique-automobile.atelier.tel/sport-technic-mandelieu-specialiste-mercedes-smart-1407494.html",
+    "https://www.bottin.fr/fiche-locale/dhhjifjhjehgbcihfde--sport-technic-mandelieu-specialty-mercedes-smart--mandelieu-la-napoule.htm",
+    "https://annuaire.petitesaffiches.fr/garagiste/sport-technic-mandelieu-51166720600011/",
+    "https://www.societe.com/societe/sport-technic-mandelieu-511667206.html",
+    "https://www.facebook.com/sporttechnic/",
+    "https://www.mygarages.fr/06/mandelieu-la-napoule/sport-technic-mandelieu-specialite-mercedes-smart-201375"
+  ],
+  "business_type": "automotive_repair_garage",
+  "category_detected": "artisan",
+
+  "identity": {
+    "commercial_name": "Sport Technic Mandelieu — Spécialiste Mercedes & Smart",
+    "legal_name": "SPORT TECHNIC MANDELIEU",
+    "short_name": "Sport Technic",
+    "tagline_inferred": "Garage indépendant spécialiste Mercedes-Benz & Smart à Mandelieu-la-Napoule",
+    "extraction_sources": "societe.com, pagesjaunes, mappy, atelier.tel"
+  },
+
+  "legal": {
+    "siren": "511 667 206",
+    "siret": "51166720600011",
+    "rcs": "Cannes 511 667 206",
+    "legal_form": "SAS (Société par actions simplifiée)",
+    "share_capital_eur": 10000,
+    "naf_code": "4520A",
+    "naf_label": "Entretien et réparation de véhicules automobiles légers",
+    "creation_date": "2009-04-07",
+    "history_note": "Reprise du fonds GARAGE SPORT TECHNIC le 1er avril 2009",
+    "employee_range": "3 à 5 salariés",
+    "status": "Active",
+    "extraction_sources": "societe.com, petitesaffiches"
+  },
+
+  "management": {
+    "president": {
+      "name": "Milos MILETIC",
+      "since": "2014-10-17"
+    },
+    "general_director": {
+      "name": "Stéphanie MILETIC",
+      "since": "2014-10-17"
+    },
+    "team_members_mentioned_in_reviews": [
+      "Milos",
+      "Stéphanie",
+      "Christian Percebois"
+    ],
+    "extraction_sources": "societe.com, atelier.tel reviews"
+  },
+
+  "contact": {
+    "address": {
+      "street": "21 Avenue Jean Mermoz",
+      "complement": "Parc d'Activité de la Siagne",
+      "postal_code": "06210",
+      "city": "Mandelieu-la-Napoule",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "department": "Alpes-Maritimes (06)",
+      "country": "France",
+      "address_note": "Mappy mentionne aussi 'Allée Charles Nungesser' — il s'agit du même Parc d'Activité de la Siagne. Adresse officielle (RCS): 21 Avenue Jean Mermoz."
+    },
+    "geo": {
+      "lat": 43.5697588,
+      "lng": 6.9445751
+    },
+    "access_note": "Sortie autoroute A8 Cannes Ouest",
+    "phone": "04 93 47 22 98",
+    "phone_international": "+33 4 93 47 22 98",
+    "fax": "04 93 48 82 67",
+    "email": "sport-technic@wanadoo.fr",
+    "website_official": null,
+    "website_note": "Aucun site officiel identifié à ce jour — c'est précisément ce que la refonte va apporter.",
+    "social": {
+      "facebook": "https://www.facebook.com/sporttechnic/"
+    },
+    "extraction_sources": "societe.com, mappy, pagesjaunes, atelier.tel, web search"
+  },
+
+  "opening_hours": {
+    "monday":    { "open": "08:00", "close_morning": "12:00", "open_afternoon": "14:00", "close": "18:00" },
+    "tuesday":   { "open": "08:00", "close_morning": "12:00", "open_afternoon": "14:00", "close": "18:00" },
+    "wednesday": { "open": "08:00", "close_morning": "12:00", "open_afternoon": "14:00", "close": "18:00" },
+    "thursday":  { "open": "08:00", "close_morning": "12:00", "open_afternoon": "14:00", "close": "18:00" },
+    "friday":    { "open": "08:00", "close_morning": "12:00", "open_afternoon": "14:00", "close": "18:00" },
+    "saturday":  "closed",
+    "sunday":    "closed",
+    "summary_fr": "Du lundi au vendredi : 8h00–12h00 / 14h00–18h00. Fermé le week-end.",
+    "note": "Une source secondaire indique 8h30–12h00 ; à confirmer auprès du client. Hors jours fériés.",
+    "extraction_sources": "mappy, pagesjaunes, mygarages, au-magasin"
+  },
+
+  "specialization": {
+    "brands": ["Mercedes-Benz", "Smart"],
+    "positioning": "Garage indépendant spécialiste — alternative au concessionnaire officiel",
+    "value_props_inferred_from_reviews": [
+      "Expertise Mercedes/Smart de niveau concessionnaire",
+      "Tarifs nettement plus accessibles que le réseau officiel",
+      "Honnêteté : privilégie la réparation à la vente de pièces",
+      "Transparence : appel client pour expliquer les travaux avant intervention",
+      "Délais annoncés respectés voire raccourcis",
+      "Accueil chaleureux et conseils personnalisés"
+    ],
+    "extraction_sources": "atelier.tel, mygarages, web search aggregated"
+  },
+
+  "services": {
+    "core": [
+      "Entretien périodique Mercedes-Benz (vidange, filtres, plaquettes, etc.)",
+      "Entretien périodique Smart",
+      "Diagnostic électronique Mercedes / Smart",
+      "Réparation mécanique générale",
+      "Remplacement de pièces (suspension, freinage, distribution, etc.)",
+      "Pré-contrôle technique"
+    ],
+    "core_note": "Liste construite à partir du code NAF 4520A et de la spécialisation déclarée. À valider par le client avant publication.",
+    "extraction_sources": "naf_code + reviews + atelier.tel"
+  },
+
+  "amenities": {
+    "accessibility": ["Parking PMR", "Entrée accessible PMR"],
+    "facilities": ["Toilettes"],
+    "payment_methods": ["Carte bancaire", "Sans contact / NFC"],
+    "extraction_sources": "atelier.tel, au-magasin"
+  },
+
+  "google_business_metrics": {
+    "rating_consensus": 4.8,
+    "rating_range_observed": "4.8 à 4.9",
+    "review_count_latest_known": 344,
+    "review_count_range_observed": "183 à 344 selon la date des sources",
+    "google_photos_count": 14,
+    "extraction_sources": "atelier.tel (4.9 / 344), au-magasin (4.8 / 230+), mygarages (4.8 / 246)"
+  },
+
+  "review_highlights": {
+    "themes": [
+      "Professionnalisme et compétence Mercedes",
+      "Honnêteté tarifaire",
+      "Transparence sur les travaux",
+      "Accueil et conseil",
+      "Fidélisation longue durée des clients"
+    ],
+    "verbatim_paraphrased_fr": [
+      "De vrais professionnels de l'automobile, spécialisés Mercedes.",
+      "Super garage avec un personnel agréable, professionnel et compétent.",
+      "Le mécanicien appelle pour expliquer clairement ce qu'il va faire.",
+      "Enfin un spécialiste Mercedes digne de ce nom, équipe professionnelle et de confiance.",
+      "Mon véhicule y est entretenu depuis plus de 3 ans, mécanique impeccable.",
+      "Tarifs très raisonnables comparés aux taux horaires des concessionnaires.",
+      "Sérieux, compétents, rapides et honnêtes — le patron prend le temps d'expliquer."
+    ],
+    "verbatim_note": "Avis paraphrasés/résumés à partir d'agrégateurs ; à ne PAS publier tels quels en faisant croire qu'ils sont des citations exactes Google. Pour des verbatims authentiques, récupérer directement depuis la fiche Google Business du client.",
+    "extraction_sources": "atelier.tel, mygarages, web search aggregated"
+  },
+
+  "google_business_url_canonical": "https://www.google.com/maps/place/Sport+Technic+Mandelieu+Specialiste+Mercedes+%26+Smart/@43.5697588,6.9445751,17z/data=!4m7!3m6!1s0x12ce829772648d7d:0x3474c274ef87076e",
+
+  "missing_or_to_confirm_with_client": [
+    "Logo officiel haute résolution",
+    "Photos professionnelles de l'atelier (intérieur, baies, équipements)",
+    "Photos de l'équipe (Milos, Stéphanie, mécaniciens)",
+    "Photos de véhicules clients ou interventions (avec accord)",
+    "Liste exhaustive et officielle des prestations + tarifs indicatifs",
+    "Confirmation horaires (8h ou 8h30 le matin ?)",
+    "Marques/modèles Mercedes pris en charge (Classe A→S, AMG ?, utilitaires Vito/Sprinter ?)",
+    "Smart : modèles pris en charge (ForTwo, ForFour, EQ électriques ?)",
+    "Services additionnels éventuels : prêt de véhicule, dépannage, géométrie, climatisation, ADAS",
+    "Année réelle de début d'activité commerciale (2009 = création SAS, mais le fonds existait avant)",
+    "Présence d'un compte Instagram ou autre réseau social",
+    "Avis Google authentiques à récupérer directement par le client (export depuis sa fiche GMB)"
+  ]
+}

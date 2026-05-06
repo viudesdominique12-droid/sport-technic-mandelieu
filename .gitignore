@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Claude / preview tooling
+.claude/settings.local.json
+
+# Source video duplicate (the deployed copy lives in site/assets/hero.mp4)
+/final.mp4
