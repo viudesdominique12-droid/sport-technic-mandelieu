@@ -56,15 +56,6 @@ html.lenis,html.lenis body{height:auto}
 .lenis.lenis-stopped{overflow:hidden}
 .lenis.lenis-scrolling iframe{pointer-events:none}
 
-/* ---------- LOADER ---------- */
-.loader{position:fixed;inset:0;z-index:200;background:var(--bg-0);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity .6s ease,visibility .6s ease}
-.loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
-.loader__bar{width:min(280px,55vw);height:1px;background:rgba(255,255,255,.12);overflow:hidden}
-.loader__bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:loadbar 1.6s ease-in-out infinite}
-@keyframes loadbar{0%{transform:translateX(-100%);width:40%}50%{width:60%}100%{transform:translateX(280%);width:40%}}
-.loader__label{font-family:var(--display);letter-spacing:.32em;font-size:11px;color:var(--txt-400)}
-.loader__label .dim{margin:0 .5em;color:var(--gold)}
-
 /* ---------- CURSOR ---------- */
 .cursor{position:fixed;top:0;left:0;pointer-events:none;z-index:300;mix-blend-mode:difference}
 .cursor__dot{position:absolute;width:6px;height:6px;background:#fff;border-radius:50%;transform:translate(-50%,-50%);transition:width var(--t-fast),height var(--t-fast)}
@@ -97,7 +88,9 @@ html.lenis,html.lenis body{height:auto}
 
 /* ---------- HERO (scroll-bound video on desktop, looping on mobile) ---------- */
 .hero{position:relative;height:300vh;background:#000}
-.hero__sticky{position:sticky;top:0;height:100vh;width:100%;overflow:hidden}
+.hero__sticky{position:sticky;top:0;height:100vh;width:100%;overflow:hidden;background:#000 url("../assets/poster.jpg") center/cover no-repeat}
+.hero__video{opacity:0;transition:opacity 600ms ease}
+.hero__video.is-ready{opacity:1}
 
 /* Mobile: shorter scroll narrative, video loops in background */
 @media (max-width:900px){

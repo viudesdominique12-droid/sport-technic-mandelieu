@@ -21,7 +21,6 @@
   function boot() {
     initYear();
     initOpenNow();
-    initLoader();
     initSmoothScroll();
     initCursor();
     initNavScroll();
@@ -48,21 +47,6 @@
         requestAnimationFrame(check);
       })();
     });
-  }
-
-  // ---------- LOADER ----------
-  function initLoader() {
-    const loader = $('#loader');
-    if (!loader) return;
-    const hide = () => {
-      loader.classList.add('is-hidden');
-      setTimeout(() => loader.remove(), 800);
-    };
-    if (document.readyState === 'complete') {
-      setTimeout(hide, 350);
-    } else {
-      window.addEventListener('load', () => setTimeout(hide, 350), { once: true });
-    }
   }
 
   // ---------- YEAR ----------
@@ -282,6 +266,15 @@
       }
     }
     setupVideoFor(isMobileHero ? 'mobile' : 'desktop');
+
+    // Fade the video in over the poster background once the first frame is buffered.
+    // Poster is set as a CSS background on .hero__sticky so it shows instantly,
+    // the video fades on top with no perceived loading.
+    const revealVideo = () => video.classList.add('is-ready');
+    if (video.readyState >= 2) revealVideo();
+    else video.addEventListener('loadeddata', revealVideo, { once: true });
+    // Hard fallback: if loadeddata never fires (slow network), reveal anyway after 4s
+    setTimeout(revealVideo, 4000);
 
     // Defensive: enforce pixel dimensions so layout math is reliable
     const sizeHero = () => {
