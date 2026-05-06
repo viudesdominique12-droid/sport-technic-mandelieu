@@ -312,8 +312,6 @@
       addEventListener('touchstart', warmUp, { once: true, passive: true });
     }
 
-    let targetTime = 0;
-    let smoothTime = 0;
     let duration = 0;
     let ready = false;
 
@@ -325,7 +323,11 @@
     else video.addEventListener('loadedmetadata', setupReady, { once: true });
 
     // ----- scroll handler: drives text layers always; drives video time on desktop only -----
+    // Single direct seek per scroll tick. Browsers already coalesce scroll
+    // events to ~60Hz, and the GOP=5 encoding makes each seek essentially free.
+    // No interpolation or rAF wrapper needed.
     let lastP = -1;
+    let lastVideoP = -1;
     function updateHeroProgress() {
       const rect = hero.getBoundingClientRect();
       const heroH = hero.offsetHeight;
@@ -335,9 +337,9 @@
       const scrolled = Math.max(0, -rect.top);
       const p = Math.max(0, Math.min(1, scrolled / totalScroll));
 
-      if (!isMobileHero && ready) {
-        targetTime = p * duration;
-        try { video.currentTime = targetTime; } catch (_) {}
+      if (!isMobileHero && ready && Math.abs(p - lastVideoP) > 0.0008) {
+        try { video.currentTime = p * duration; } catch (_) {}
+        lastVideoP = p;
       }
 
       toggleLayer(layers[0], p < 0.33);
@@ -358,19 +360,6 @@
       if (!el) return;
       el.classList.toggle('is-visible', on);
     }
-
-    // Smooth interpolation only on desktop (scrub mode)
-    function tick() {
-      if (!isMobileHero && ready) {
-        const delta = targetTime - smoothTime;
-        smoothTime += delta * 0.18;
-        if (Math.abs(delta) > 0.005) {
-          try { video.currentTime = smoothTime; } catch (_) {}
-        }
-      }
-      requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
 
     // Final layout settle (fonts, etc.)
     addEventListener('load', () => {
